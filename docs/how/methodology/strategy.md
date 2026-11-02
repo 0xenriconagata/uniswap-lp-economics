@@ -2,7 +2,7 @@
 
 ## 21. Strategy experiment (Phase 5)
 
-Design: [`docs/specs/2026-10-21-strategy-experiment-design.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/docs/specs/2026-10-21-strategy-experiment-design.md).
+Design: [`docs/specs/2026-10-21-strategy-experiment-design.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/docs/specs/2026-10-21-strategy-experiment-design.md).
 Code: `strategy/` (every pre-registered value in `strategy/params.py`), `data/futures.py`.
 Results: `results/strategy_{checks,ranges,fees,hedge,test}.md` (CSVs alongside),
 `summary.json["strategy"]`, `results/strategy_freeze.json`. Every number is a counterfactual

@@ -24,7 +24,7 @@ other traders would react to a different range, fee or hedge.
 ## How it was pre-registered
 
 The hypothesis was written down before any August–September strategy result existed
-([spec](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/docs/specs/2026-10-21-strategy-experiment-design.md),
+([spec](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/docs/specs/2026-10-21-strategy-experiment-design.md),
 section 1):
 
 > A passive LP in this pool can't fix the loss by choosing a better range or hedging. Those change
@@ -36,7 +36,7 @@ section 1):
   fees ÷ LVR, r₀ = 0.729, and from it the margin δ = (1 − r₀) / 4 = 0.068; the simulated
   arbitrage's minimum profit; the LP gas costs; the calibration verdict; and the best July
   strategy. It wrote them to
-  [`results/strategy_freeze.json`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/strategy_freeze.json),
+  [`results/strategy_freeze.json`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/strategy_freeze.json),
   which was committed (`f565e41`) and tagged `strategy-preregistered` before any August–September
   strategy result existed. The report run reads every July value from that file and never rewrites it.
 - **Two gates first.** S2 replays the window through the counterfactual pool at 5 bp with nothing
@@ -84,7 +84,7 @@ inner half (*band*), or at each UTC day (*daily*).
 
 With the 95% paired interval; **bold**: not inside ±δ = ±0.0677. Every row but ±5,000 bp is
 flagged (peak share of active liquidity above 5%). Full return table:
-[`results/strategy_ranges.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/strategy_ranges.md).
+[`results/strategy_ranges.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/strategy_ranges.md).
 
 | half-width | out of range | band | daily |
 |---|---|---|---|
@@ -175,8 +175,8 @@ with little room (9.4e-10 against the pre-registered 1e-9).
 
 </details>
 
-<small>Sources: [strategy checks](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/strategy_checks.md) ·
-[ranges](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/strategy_ranges.md) ·
-[fees](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/strategy_fees.md) ·
-[hedge](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/strategy_hedge.md) ·
+<small>Sources: [strategy checks](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/strategy_checks.md) ·
+[ranges](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/strategy_ranges.md) ·
+[fees](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/strategy_fees.md) ·
+[hedge](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/strategy_hedge.md) ·
 method: [strategy experiment](../how/methodology/strategy.md#21-strategy-experiment-phase-5)</small>

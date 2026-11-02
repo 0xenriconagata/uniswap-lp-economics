@@ -75,7 +75,7 @@ such as ultrasound, or were found on no relay. They could be sealed at other tim
 
 </details>
 
-<small>Sources: [reference robustness](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/reference_robustness.md) ·
-[block timing](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/block_timing.md) ·
-[mid proxy](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/reference_robustness_proxy.md) ·
+<small>Sources: [reference robustness](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/reference_robustness.md) ·
+[block timing](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/block_timing.md) ·
+[mid proxy](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/reference_robustness_proxy.md) ·
 method: [reference and timing](../how/methodology/robustness.md#18-reference-and-timing-robustness-sub-project-4)</small>

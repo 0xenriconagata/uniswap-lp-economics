@@ -2,9 +2,9 @@
 # served from results/figures/ and assets/fonts/ by scripts/mkdocs_hooks.py.
 site_name: Who makes money on Uniswap V3?
 site_description: A trade-by-trade study of who has edge against a Uniswap pool, who pays for it, and where the money ends up.
-site_url: https://samuraixx-key.github.io/uniswap-lp-economics/
+site_url: https://0xenriconagata.github.io/uniswap-lp-economics/
 site_author: Enrico Nagata
-repo_url: https://github.com/samuraixx-key/uniswap-lp-economics
+repo_url: https://github.com/0xenriconagata/uniswap-lp-economics
 repo_name: uniswap-lp-economics
 edit_uri: ""
 copyright: Enrico Nagata · MIT licence · Research only; not financial advice.

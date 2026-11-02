@@ -3,9 +3,9 @@
 A trade-by-trade study of $7.05B of flow, measured against Binance: every one of the 534,377
 swaps in the Uniswap V3 USDC/WETH 0.05% pool on Ethereum from 2026-07-01 to 2026-10-01.
 
-[![CI](https://github.com/samuraixx-key/uniswap-lp-economics/actions/workflows/ci.yml/badge.svg)](https://github.com/samuraixx-key/uniswap-lp-economics/actions/workflows/ci.yml)
+[![CI](https://github.com/0xenriconagata/uniswap-lp-economics/actions/workflows/ci.yml/badge.svg)](https://github.com/0xenriconagata/uniswap-lp-economics/actions/workflows/ci.yml)
 
-**[Read the full report on the website →](https://samuraixx-key.github.io/uniswap-lp-economics/)**
+**[Read the full report on the website →](https://0xenriconagata.github.io/uniswap-lp-economics/)**
 
 **In trading terms:** LP = passive market maker · LVR = the adverse-selection cost of quoting
 stale prices · searchers = arbitrage bots · builder/proposer payments = what bots pay to get
@@ -32,12 +32,12 @@ their trades into the block.
 
 - Strategy tests and their pass/fail rules were frozen with a git tag before the strategy tests
   were run: `strategy-preregistered`
-  ([freeze](results/strategy_freeze.json), [at the tag](https://raw.githubusercontent.com/samuraixx-key/uniswap-lp-economics/strategy-preregistered/results/strategy_freeze.json);
-  [spec](docs/specs/2026-10-21-strategy-experiment-design.md), [at the tag](https://raw.githubusercontent.com/samuraixx-key/uniswap-lp-economics/strategy-preregistered/docs/superpowers/specs/2026-10-21-strategy-experiment-design.md)).
+  ([freeze](results/strategy_freeze.json), [at the tag](https://raw.githubusercontent.com/0xenriconagata/uniswap-lp-economics/strategy-preregistered/results/strategy_freeze.json);
+  [spec](docs/specs/2026-10-21-strategy-experiment-design.md), [at the tag](https://raw.githubusercontent.com/0xenriconagata/uniswap-lp-economics/strategy-preregistered/docs/superpowers/specs/2026-10-21-strategy-experiment-design.md)).
 - A check that failed, reported as failed: the first proposer-split test, `holdout-preregistered`
-  ([spec](docs/specs/2026-10-21-proposer-payments-design.md), [at the tag](https://raw.githubusercontent.com/samuraixx-key/uniswap-lp-economics/holdout-preregistered/docs/superpowers/specs/2026-10-21-proposer-payments-design.md)).
+  ([spec](docs/specs/2026-10-21-proposer-payments-design.md), [at the tag](https://raw.githubusercontent.com/0xenriconagata/uniswap-lp-economics/holdout-preregistered/docs/superpowers/specs/2026-10-21-proposer-payments-design.md)).
   A new check, written down before a fresh holdout, `forwarder-preregistered`
-  ([spec](docs/specs/2026-10-21-forwarder-recipient-check-design.md), [at the tag](https://raw.githubusercontent.com/samuraixx-key/uniswap-lp-economics/forwarder-preregistered/docs/superpowers/specs/2026-10-21-forwarder-recipient-check-design.md)),
+  ([spec](docs/specs/2026-10-21-forwarder-recipient-check-design.md), [at the tag](https://raw.githubusercontent.com/0xenriconagata/uniswap-lp-economics/forwarder-preregistered/docs/superpowers/specs/2026-10-21-forwarder-recipient-check-design.md)),
   passed 290 of 290; the first decision stays on file.
 - August–September is out of sample for every parameter, but not for me: I'd seen the window's
   totals when I wrote the test.
@@ -52,8 +52,8 @@ No. Passive LP in this pool doesn't pay after the protocol's cut. An hourly hedg
 full-range position's daily P&L spread from $16.4k to $160 per $1M, which changes the risk, not
 the edge.
 
-[Full report](https://samuraixx-key.github.io/uniswap-lp-economics/report/) · [How I worked](https://samuraixx-key.github.io/uniswap-lp-economics/how/) · [Why these choices](https://samuraixx-key.github.io/uniswap-lp-economics/how/choices/) ·
-[Methodology](https://samuraixx-key.github.io/uniswap-lp-economics/how/methodology/) · [Limitations](https://samuraixx-key.github.io/uniswap-lp-economics/how/limitations/) · [Reproduce](https://samuraixx-key.github.io/uniswap-lp-economics/reproduce/)
+[Full report](https://0xenriconagata.github.io/uniswap-lp-economics/report/) · [How I worked](https://0xenriconagata.github.io/uniswap-lp-economics/how/) · [Why these choices](https://0xenriconagata.github.io/uniswap-lp-economics/how/choices/) ·
+[Methodology](https://0xenriconagata.github.io/uniswap-lp-economics/how/methodology/) · [Limitations](https://0xenriconagata.github.io/uniswap-lp-economics/how/limitations/) · [Reproduce](https://0xenriconagata.github.io/uniswap-lp-economics/reproduce/)
 
-MIT licence (two figure-data files hold Binance prices: see the [data page](https://samuraixx-key.github.io/uniswap-lp-economics/how/data/)). Research only; not
+MIT licence (two figure-data files hold Binance prices: see the [data page](https://0xenriconagata.github.io/uniswap-lp-economics/how/data/)). Research only; not
 financial advice.

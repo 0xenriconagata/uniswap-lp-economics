@@ -26,7 +26,7 @@ coinbase_usd     = Σ internal transfers from the bot contract to the block's mi
 **Single-pool vs multi-pool.** A top-bot transaction is `single_pool` (classic CEX-DEX arbitrage)
 when every log it emits comes from our pool, USDC, WETH or the bot contract itself, i.e. its count
 in `bot_tx_other_logs.parquet` is 0; otherwise it is `multi_pool`. Single-pool transactions get the
-full breakdown ([`results/bot_profit.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/bot_profit.md), per bot and TOTAL):
+full breakdown ([`results/bot_profit.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/bot_profit.md), per bot and TOTAL):
 
 ```
 gross                  = Σ trader_markout_usd(0)
@@ -41,7 +41,7 @@ single-pool transactions that carry a coinbase payment; `share_txs_with_coinbase
 `txs_with_coinbase / txs` (null when `txs` is 0).
 
 The net ratio reported (`kept_over_top_bot_gross` in
-[`results/arbitrage.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/arbitrage.md), and `kept_over_top_bot_gross_12s` against the
+[`results/arbitrage.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/arbitrage.md), and `kept_over_top_bot_gross_12s` against the
 12 s markout) is `kept / top-bot single-pool gross`: numerator and denominator cover the same
 transactions. The spec's `kept / captured` would divide the top bots' single-pool result by all
 searchers' 0 s markouts, mixing two populations, so it is not reported.
@@ -55,7 +55,7 @@ timestamp. That is the edge measurable at block time, not the bots' realised hed
 small difference of large totals, so its sign depends on the horizon: with the same costs, `kept`
 is −$0.19M at the 0 s markout and +$0.06M at 12 s (builder income 115% vs 95% of gross; gross
 $1.22M vs $1.47M; `kept_usd` and `kept_12s_usd` in
-[`results/arbitrage.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/arbitrage.md)). A negative `kept` therefore does not show that
+[`results/arbitrage.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/arbitrage.md)). A negative `kept` therefore does not show that
 the bots lose money:
 
 1. The bots' own hedge price and timing are not observed, and the measured edge depends on `t0`:
@@ -81,7 +81,7 @@ Positive basis = ETH is dearer in the pool than on Binance.
 
 ### 6.2 Basis distribution
 
-[`results/basis.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/basis.md): the mean and the 1, 5, 25, 50, 75, 95 and 99%
+[`results/basis.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/basis.md): the mean and the 1, 5, 25, 50, 75, 95 and 99%
 quantiles of `basis_bp` and `|basis_bp|`, and the share of blocks with `|basis_bp| > 5`. 5 bp is
 the fee band: inside it, an arbitrage at the block-start price loses money before gas (section 7).
 
@@ -90,7 +90,7 @@ the fee band: inside it, an arbitrage at the block-start price loses money befor
 - An episode is a maximal run of consecutive blocks with `|basis_bp| > k`, for `k` = 5 bp (primary)
   and 10 bp. Runs are taken over consecutive rows of the block series, which check A2 shows has no
   missing block.
-- Per episode ([`results/episodes.csv`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/episodes.csv)): start and end block, number of
+- Per episode ([`results/episodes.csv`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/episodes.csv)): start and end block, number of
   blocks, `duration_s` = time from the first to the last block's timestamp plus the interval from
   the last block to the next one (a one-block episode lasts one block interval, usually 12 s),
   peak `|basis_bp|`, and `gap_weight = Σ |basis_bp| × block seconds`.
@@ -100,7 +100,7 @@ the fee band: inside it, an arbitrage at the block-start price loses money befor
     swap that overshoots through `P_cex` counts only if the absolute log gap still shrinks.
   - `cex`, if no swap in `e` reduced the gap: Binance moved back toward the pool.
   - `open`, if `e` is the window's last block.
-- Outputs ([`results/episodes.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/episodes.md)): per closer, the count and share of
+- Outputs ([`results/episodes.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/episodes.md)): per closer, the count and share of
   episodes, the gap weight and its share, and the median duration; a survival curve of durations.
 
 The closer is the swap in `e` that moved the pool furthest toward Binance; it need not have closed
@@ -120,7 +120,7 @@ xcorr(lag) = corr(r_pool[b], r_cex[b − lag]),  lag = −5 … +5 blocks
 A positive lag means Binance moved first. At lag +1 the pool's move in block `b` is compared with
 Binance's move over `[t[b−1], t[b]]`, the interval just before block `b`'s timestamp, i.e. the
 information available when block `b` is built. Results:
-[`results/leadlag.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/leadlag.md).
+[`results/leadlag.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/leadlag.md).
 
 AR(1), by OLS over consecutive blocks:
 
@@ -160,7 +160,7 @@ tick book. `arb_to_price` runs an exact-input swap with the target as the price 
 initialized ticks and applying their liquidity changes; amounts stay exact integers until the
 final conversion to USD. Check A1 shows the same code reproduces every historical swap.
 
-Outputs ([`results/arbitrage.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/arbitrage.md)): `available_usd` (`c` = 0) and
+Outputs ([`results/arbitrage.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/arbitrage.md)): `available_usd` (`c` = 0) and
 `available_cex1bp_usd` (`c` = 1 bp), summed over all blocks and per UTC day.
 
 Assumptions and what they mean for the total:
@@ -183,7 +183,7 @@ minus gas burned → minus priority fee → minus coinbase payment → kept.
 
 ## 8. Checks A1–A6
 
-Written to [`results/analysis_checks.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/analysis_checks.md) (and `.json`) before any
+Written to [`results/analysis_checks.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/analysis_checks.md) (and `.json`) before any
 result. A1–A4 are gated: a failure stops `ulpe analyze` before it writes results. A5 and A6 are
 reported. All six pass in this run.
 

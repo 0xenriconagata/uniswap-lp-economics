@@ -36,7 +36,7 @@ transaction is single-pool when it emits no log from an address other than our p
 its target (`COALESCE(to_address, the contract created)`); this is counted for every transaction
 touching our pool. Multi-pool transactions are reported gross only.
 
-The chain ([`results/lvr_destination.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/lvr_destination.md), the hero figure) runs: pool LVR
+The chain ([`results/lvr_destination.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/lvr_destination.md), the hero figure) runs: pool LVR
 at 0 s (3,703,796.76 USD) → minus the other flows (−440,321.24) → LVR on searcher steps
 (4,144,118.00) = LP fees (1,976,144.85) + protocol fees (658,714.87) + searcher gross
 (1,509,258.29); gross = multi-pool gross (257,681.73) + single-pool gross (1,251,576.57); single-pool
@@ -61,7 +61,7 @@ are kept as the record of what was published before; `summary.json` no longer ca
 
 These blocks carry 297,357.38 USD (0.2060) of the 1,443,430.55 USD of single-pool builder
 payments (11,432 swaps), and 0.3767 of the primary proposer total. The sensitivity
-(`sensitivity_self_built` in [`summary.json` at tag `forwarder-preregistered`](https://raw.githubusercontent.com/samuraixx-key/uniswap-lp-economics/forwarder-preregistered/results/summary.json),
+(`sensitivity_self_built` in [`summary.json` at tag `forwarder-preregistered`](https://raw.githubusercontent.com/0xenriconagata/uniswap-lp-economics/forwarder-preregistered/results/summary.json),
 before the class fix of section 20.1; the current results no longer compute it) gives
 them the paid blocks' proposer share instead of 1:
 
@@ -100,7 +100,7 @@ single-pool transactions only, not every searcher.
 
 ## 19. Proposer-payment detection
 
-Design: [`docs/specs/2026-10-21-proposer-payments-design.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/docs/specs/2026-10-21-proposer-payments-design.md).
+Design: [`docs/specs/2026-10-21-proposer-payments-design.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/docs/specs/2026-10-21-proposer-payments-design.md).
 Its pre-registered parts (the rule, the holdout, the bar and the stopping rule) were committed
 before any holdout relay call; the commit is tagged `holdout-preregistered`.
 
@@ -125,7 +125,7 @@ Each window block gets one class, in this order, from chain data only:
 5. **unexplained**: everything else. `Q_b = R_b`.
 
 Counts in this section are from before the class fix of section 20.1 (the results in
-[`summary.json` at tag `forwarder-preregistered`](https://raw.githubusercontent.com/samuraixx-key/uniswap-lp-economics/forwarder-preregistered/results/summary.json)); section 20.1 gives the
+[`summary.json` at tag `forwarder-preregistered`](https://raw.githubusercontent.com/0xenriconagata/uniswap-lp-economics/forwarder-preregistered/results/summary.json)); section 20.1 gives the
 current ones.
 
 | Class | Blocks | Share of blocks | Single-pool builder USD | Share |
@@ -229,7 +229,7 @@ found holdout block of the rule matches the relay's value exactly.
 The payout rule's split was fixed with the rule before the run, so it is reported beside the
 published pair, labelled as measured payments that were not adopted because the pre-registered
 recipient check failed (`rule_split` in [`summary.json` at tag
-`forwarder-preregistered`](https://raw.githubusercontent.com/samuraixx-key/uniswap-lp-economics/forwarder-preregistered/results/summary.json); the current results publish this split, so they
+`forwarder-preregistered`](https://raw.githubusercontent.com/0xenriconagata/uniswap-lp-economics/forwarder-preregistered/results/summary.json); the current results publish this split, so they
 no longer compute it separately):
 
 | | primary | sensitivity | measured payments; not adopted |
@@ -249,7 +249,7 @@ rule, $633.49 (0.044%) of single-pool builder dollars is unexplained, too little
 
 ## 20. Recipient check through forwarders
 
-Design: [`docs/specs/2026-10-21-forwarder-recipient-check-design.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/docs/specs/2026-10-21-forwarder-recipient-check-design.md).
+Design: [`docs/specs/2026-10-21-forwarder-recipient-check-design.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/docs/specs/2026-10-21-forwarder-recipient-check-design.md).
 Sections 3 to 6 of it (the class fix, the check, the holdout, the bar and the stopping rule) were
 committed and tagged `forwarder-preregistered` before the seed-45 holdout was drawn; the code was
 reviewed against them before the draw. No new check was computed on the seed-44 holdout.

@@ -174,9 +174,9 @@ enforces the identity over the window: 3,703,796.7592831883 USD from the steps a
 **LP fees vs total fees.** The headline `fees_minus_lvr_usd` (−1,059,609.59 USD) uses LP fees, net
 of the protocol's quarter (881,290.13 USD). The quarter is most of that gap. Total swap fees
 (`daily` in `summary.json`, summed from `fees_usd + protocol_fee_usd` of
-[`results/lvr_daily.csv`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/lvr_daily.csv)) are 3,525,477.30 USD, short of LVR by
+[`results/lvr_daily.csv`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/lvr_daily.csv)) are 3,525,477.30 USD, short of LVR by
 178,319.46 USD, with a 95% day-bootstrap interval of −566,463.71 to +91,433.73 (section 13). By
-volatility tercile (`total_fees_minus_lvr_usd` in [`results/vol_regimes.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/vol_regimes.md)),
+volatility tercile (`total_fees_minus_lvr_usd` in [`results/vol_regimes.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/vol_regimes.md)),
 total fees − LVR is +31,703.62 (low), +54,157.72 (mid) and −264,180.80 USD (high), and LVR exceeds
 total fees on 41 of the 92 days (against 79 for LP fees). This matches the sub-project 2 all-swaps trader markout of
 +0.25 bp at 0 s (95% interval −0.14 to 0.77, section 3): by the identity above, the counterparties'
@@ -206,7 +206,7 @@ theory_arb      = theory_1s × P_trade           expected arbitrage profit
 theory_arb_fees = theory_1s × (1 − P_trade)     expected fees paid by arbitrage
 ```
 
-Window totals ([`results/lp_pnl.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/lp_pnl.md)): theory 3,155,610.48 USD with 1 s
+Window totals ([`results/lp_pnl.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/lp_pnl.md)): theory 3,155,610.48 USD with 1 s
 returns and 4,325,747.96 USD with 1-minute returns, against measured 3,703,796.76 USD;
 `theory_arb` 931,857.47 USD and `theory_arb_fees` 2,223,753.00 USD. The model assumes geometric
 Brownian motion and blocks arriving as a Poisson process with rate λ, while Ethereum slots are a
@@ -217,12 +217,12 @@ trade catching up with the price over several seconds) dominate, and noise does 
 
 **Volatility regimes.** The 92 days are ranked by `σ_annual` (ordinal rank) and split into terciles:
 rank ≤ n/3 is `low` (30 days), ≤ 2n/3 `mid` (31), else `high` (31)
-([`results/vol_regimes.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/vol_regimes.md)). The regime × LP type table sums the
+([`results/vol_regimes.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/vol_regimes.md)). The regime × LP type table sums the
 per-day attribution of section 10.
 
 ## 13. P&L in the window
 
-Per window-active position, in USD ([`results/positions.csv`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/positions.csv)):
+Per window-active position, in USD ([`results/positions.csv`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/positions.csv)):
 
 - `fees`, `lvr_0`, `lvr_12` from the attribution layer.
 - `gas`: every window transaction that changed the position (mint, burn, collect, increase,
@@ -248,14 +248,14 @@ Per window-active position, in USD ([`results/positions.csv`](https://github.com
   that block's swaps, at most one block stale). A position open at no hour start uses the
   value of its first in-window deposit (or of its start holdings) at that block's price. `days` is
   `(t_exit − t_start) / 86,400 s`; a `jit` position counts one 12 s slot.
-- **Groups** ([`results/lp_groups.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/lp_groups.md)), by LP type, range width, holding
+- **Groups** ([`results/lp_groups.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/lp_groups.md)), by LP type, range width, holding
   time and cohort: count, Σ fees, Σ LVR, Σ gas, Σ direct, Σ `pnl_rebal`, Σ `pnl_hold`, the share
   with
   `pnl_hold > 0`, and `bp_per_day = Σ pnl_rebal / Σ (twv × days) × 10⁴`, i.e. weighted by
   value × time, with a 95% interval from a bootstrap over positions (1,000 resamples, seed 42,
   2.5th to 97.5th percentile of the same ratio).
 - **JIT per swap** (spec section 6; `jit_per_swap` in `summary.json` and
-  [`results/lp_pnl.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/lp_pnl.md)): a `jit` position is active for the swaps of its
+  [`results/lp_pnl.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/lp_pnl.md)): a `jit` position is active for the swaps of its
   block that lie, in log order, between its first liquidity add and its last removal. The jit
   totals of fees, LVR, gas, direct payments and both P&Ls are divided by the number of such
   position-swap pairs: 844 positions, 826 of them with at least one swap, 914 pairs; +3.90 USD per
@@ -271,7 +271,7 @@ Per window-active position, in USD ([`results/positions.csv`](https://github.com
   rebalancing becomes about −10,733 USD with the swaps' markout added. The swaps lie outside the
   JIT positions' spans (all but 6, worth −0.01 USD, come before the first add or after the last
   removal), so they trade against other LPs and do not overlap the JIT positions' LVR.
-- **Daily series** ([`results/lvr_daily.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/lvr_daily.md)): per UTC day, LP fees,
+- **Daily series** ([`results/lvr_daily.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/lvr_daily.md)): per UTC day, LP fees,
   protocol fees, measured LVR at 0 s and 12 s, the searcher part (LVR, LP fees and protocol fees on
   searcher swaps), realised variance, `σ_annual`, the theoretical values and the regime.
 - **Day bootstrap** (spec section 6: the pool-level daily series keep sub-project 2's day
@@ -289,7 +289,7 @@ step lacked liquidity.
 ## 14. Lifetime P&L against holding
 
 For every window-active position, over its whole history
-([`results/lifetime.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/lifetime.md)):
+([`results/lifetime.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/lifetime.md)):
 
 ```
 pnl_hold_life = (Σ collected + owed and accrued at the window end + V_end − Σ deposited) at P_exit
@@ -315,7 +315,7 @@ beat_hold     = pnl_hold_life > 0
 
 ## 16. Checks L1–L7 and R1–R6
 
-Written to [`results/lp_checks.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/lp_checks.md) (and `.json`). L1–L7 are gated: `ulpe
+Written to [`results/lp_checks.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/lp_checks.md) (and `.json`). L1–L7 are gated: `ulpe
 lp` computes everything, then writes the checks and, only if all pass, the results (`summary.json`
 last). R1–R6 are reported (R6: section 18.5), never gate, and show "reported" in the Result column. All of L1–L7
 pass in this run.
@@ -386,7 +386,7 @@ profitable JIT position, and the figure says so. In the block shown, the operato
 moves the pool from $1,794.90 to $1,759.93; its liquidity then buys the next trader's ETH at that
 low price, a "negative LVR" of $2,093.08. The position made $1,125.36 against rebalancing, but the
 operator's own two swaps lost $1,088.90 against Binance at 0 s: all in, the operator came out
-$36.47 ahead ([`results/figure_data/jit_block.csv`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/figure_data/jit_block.csv)).
+$36.47 ahead ([`results/figure_data/jit_block.csv`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/figure_data/jit_block.csv)).
 
 **"$10k" framing (figure 10).** P&L per $10,000 of time-weighted position value per 30 days =
 `bp_per_day × 30`, since `bp_per_day` is P&L per 10⁴ of value per day.

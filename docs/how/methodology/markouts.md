@@ -65,7 +65,7 @@ Used as the bp denominator, this asymmetry changes a markout by at most 0.05% of
 
 Groups: flow label (section 4); size bucket on `notional_usd` (`<1k`, `1k-10k`, `10k-100k`,
 `>=100k` USD); flow label × size bucket; and all swaps. Per group and horizon
-([`results/markouts.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/markouts.md)):
+([`results/markouts.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/markouts.md)):
 
 - `swaps`, `notional_usd` = Σ notional, `markout_usd` = Σ trader markout;
 - `mean_bp = Σ markout_usd / Σ notional_usd × 10⁴`, the notional-weighted mean;
@@ -90,7 +90,7 @@ share their resampled days: their intervals are comparable but not independent d
 
 ### 3.4 Robustness variants
 
-[`results/markouts_robustness.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/markouts_robustness.md) re-runs the flow-label table
+[`results/markouts_robustness.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/markouts_robustness.md) re-runs the flow-label table
 three more times:
 
 1. `ethusdt_reference`: the reference is the ETHUSDT 1-second candle close. A candle's close is known
@@ -129,7 +129,7 @@ that covers at least 90% of `searcher` notional, capped at 25 contracts. In this
 four contracts (`top_bots` in `results/summary.json`). Builder payments are fetched for these
 contracts only.
 
-**Coverage** ([`results/labels_coverage.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/labels_coverage.md), check A5). The file
+**Coverage** ([`results/labels_coverage.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/labels_coverage.md), check A5). The file
 lists notional share by label and the 30 unlabelled (`other_contract`) senders and transaction
 targets with the most notional. The two largest, the pool caller
 `0x8f10b468b06c6fd214b65f87778827f7d113f996` (119,480,261.21 USD) and the transaction target

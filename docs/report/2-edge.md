@@ -87,6 +87,6 @@ identity, and 11% of notional stays `other_contract`. The day bootstrap treats d
 
 </details>
 
-<small>Sources: [markouts](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/markouts.md) ·
-[markouts robustness](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/markouts_robustness.md) ·
+<small>Sources: [markouts](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/markouts.md) ·
+[markouts robustness](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/markouts_robustness.md) ·
 method: [markouts](../how/methodology/markouts.md#3-markouts)</small>

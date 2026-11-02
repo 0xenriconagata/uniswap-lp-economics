@@ -151,9 +151,9 @@ stored state equals the chain's at both ends of the window.
 
 </details>
 
-<small>Sources: [LP P&L](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/lp_pnl.md) ·
-[volatility regimes](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/vol_regimes.md) ·
-[LP groups](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/lp_groups.md) ·
-[lifetime](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/lifetime.md) ·
-[LP checks](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/lp_checks.md) ·
+<small>Sources: [LP P&L](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/lp_pnl.md) ·
+[volatility regimes](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/vol_regimes.md) ·
+[LP groups](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/lp_groups.md) ·
+[lifetime](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/lifetime.md) ·
+[LP checks](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/lp_checks.md) ·
 method: [LP positions, fees and LVR](../how/methodology/lp.md#11-measured-lvr)</small>

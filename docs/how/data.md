@@ -52,7 +52,7 @@ by the repository's MIT licence. Every other file in `results/` holds derived st
 
 ## Validation
 
-Full report: [`data_validation/validation_report.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/data_validation/validation_report.md)
+Full report: [`data_validation/validation_report.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/data_validation/validation_report.md)
 (machine-readable: `validation_report.json`, which also lists a SHA-256 prefix of every input file
 and the git commit). Overall status: **PASS**.
 
@@ -84,7 +84,7 @@ Method summary: every definition and formula is in the [full methodology](method
 ## 1. Data and validation
 
 Inputs from sub-project 1, validated by checks C1–C6
-([`data_validation/validation_report.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/data_validation/validation_report.md)): pool events and
+([`data_validation/validation_report.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/data_validation/validation_report.md)): pool events and
 swaps, the full tick book at snapshot block 25,433,938, Binance ETHUSDC trades and ETHUSDT 1-second
 candles. Replaying the events from the snapshot gives the exact pool state before every event.
 
@@ -102,11 +102,11 @@ Guards and provenance:
 - `ulpe analyze` first calls `require_validated()`: the validation report must say PASS, and the
   SHA-256 prefix of every `interim/*` file it lists must match the file on disk.
 - It then runs checks A1–A6 (section 8) and writes them to
-  [`results/analysis_checks.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/analysis_checks.md). If a gated check (A1–A4) fails, it
+  [`results/analysis_checks.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/analysis_checks.md). If a gated check (A1–A4) fails, it
   stops before writing any result.
 - `results/summary.json` records the git commit and the SHA-256 prefix of every input file.
 - Per-swap and per-block working tables go to `DATA_DIR/processed/aligned.parquet` (one row per
   swap, section 3) and `blocks_state.parquet` (one row per block, section 6).
 
 The window holds 534,377 swaps with a total notional of 7,049,939,044.91 USD
-([`results/markouts.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/markouts.md)) in 659,799 blocks.
+([`results/markouts.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/markouts.md)) in 659,799 blocks.

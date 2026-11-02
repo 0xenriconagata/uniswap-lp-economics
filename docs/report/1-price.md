@@ -88,8 +88,8 @@ every swap.
 
 </details>
 
-<small>Sources: [leadlag](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/leadlag.md) ·
-[basis](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/basis.md) ·
-[episodes](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/episodes.md) ·
-[analysis checks](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/analysis_checks.md) ·
+<small>Sources: [leadlag](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/leadlag.md) ·
+[basis](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/basis.md) ·
+[episodes](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/episodes.md) ·
+[analysis checks](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/analysis_checks.md) ·
 method: [price discovery](../how/methodology/discovery.md#6-price-discovery)</small>

@@ -3,9 +3,9 @@
 This file defines every quantity in `results/` and gives its formula. Scope: the Uniswap V3
 USDC/WETH 0.05% pool (`0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640`) against Binance, window
 `[2026-07-01, 2026-10-01)` UTC. Sections 1–8 cover sub-project 2 (design spec
-[`docs/specs/2026-10-13-price-discovery-markouts-design.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/docs/specs/2026-10-13-price-discovery-markouts-design.md));
+[`docs/specs/2026-10-13-price-discovery-markouts-design.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/docs/specs/2026-10-13-price-discovery-markouts-design.md));
 sections 9–17 cover sub-project 3, LP P&L and where LVR goes (design spec
-[`docs/specs/2026-10-14-lp-pnl-lvr-design.md`](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/docs/specs/2026-10-14-lp-pnl-lvr-design.md)).
+[`docs/specs/2026-10-14-lp-pnl-lvr-design.md`](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/docs/specs/2026-10-14-lp-pnl-lvr-design.md)).
 Where an implementation plan amended a spec, the ruling is cited ("Ruling n"; the plans were
 removed before publication and stay in the git history before commit `4123faf`, each numbering
 its own rulings); the sub-project 3

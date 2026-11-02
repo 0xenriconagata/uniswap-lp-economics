@@ -128,8 +128,8 @@ recorded, so up to 229 may lack its answer.
 
 </details>
 
-<small>Sources: [arbitrage](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/arbitrage.md) ·
-[bot profit](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/bot_profit.md) ·
-[LVR destination](https://github.com/samuraixx-key/uniswap-lp-economics/blob/main/results/lvr_destination.md) ·
+<small>Sources: [arbitrage](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/arbitrage.md) ·
+[bot profit](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/bot_profit.md) ·
+[LVR destination](https://github.com/0xenriconagata/uniswap-lp-economics/blob/main/results/lvr_destination.md) ·
 method: [costs and builder payments](../how/methodology/discovery.md#5-costs-and-builder-payments),
 [where LVR goes](../how/methodology/destination.md#15-where-lvr-goes)</small>
