@@ -21,9 +21,5 @@ wheels/
 .mypy_cache/
 .ruff_cache/
 
-# Local tooling workspaces
-.claude/
-.superpowers/
-
 # Built website (mkdocs build)
 /site/
